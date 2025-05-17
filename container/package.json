@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "start:all": "concurrently \"npm:start:cart\" \"npm:start:products\" \"npm:start\"",
+    "start:cart": "cd ../cart && npx webpack serve",
+    "start:products": "cd ../products && npx webpack serve"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +18,8 @@
     "webpack": "5.88.0",
     "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }
