@@ -1,6 +1,7 @@
 import { renderProducts } from "productsApp/ProductsIndex";
-import "cartApp/CartShow";
+import { renderCart } from "cartApp/CartShow";
 
 console.log("container");
 
-renderProducts(document.querySelector("#dev-products"));
+renderProducts(document.querySelector("#products-section"));
+renderCart(document.querySelector("#cart-section"));
